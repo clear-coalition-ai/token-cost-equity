@@ -1,5 +1,7 @@
 ## Data Sources
-CLEAR Benchmarking Team - downloaded `Chosen Models` sheet from `LLM CLEAR Sheet` Google Sheet file in `.tsv` format
+CLEAR Benchmarking Team 
+- downloaded `Chosen Models` sheet from `LLM CLEAR Sheet` Google Sheet file in `.tsv` format
+- downloaded all files in `scores` folder from https://huggingface.co/datasets/African-Languages-Lab/proxy-mt-benchmark-scores
 
 FLORES-200 - downloaded original version from https://github.com/facebookresearch/flores/blob/main/flores200/README.md
 
