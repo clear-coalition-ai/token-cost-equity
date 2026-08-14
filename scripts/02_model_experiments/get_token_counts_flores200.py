@@ -114,31 +114,36 @@ for model in google_model_list:
         results.append(result_i)
 
         
-results_df = pd.DataFrame(data = results)
+flores200_token_counts = pd.DataFrame(data = results)
+
+
+# %% Write results to CSV file
+flores200_token_counts.to_csv("02_output_model_experiments/flores200_token_counts.csv", index = False)
+
 
 
 # %% Add language info
 flores200_langinfo = pd.read_table("01_data_processed/flores200_langinfo.tsv", keep_default_na = False, na_values = [""])
 
-results_df = pd.merge(left = results_df, right = flores200_langinfo, how = "outer", on = "file", indicator = True)
+flores200_token_counts_langinfo = pd.merge(left = flores200_token_counts, right = flores200_langinfo, how = "outer", on = "file", indicator = True)
 
-assert all(results_df["_merge"] == "both")
+assert all(flores200_token_counts_langinfo["_merge"] == "both")
     # confirming merge resulted in full match
-results_df = results_df.drop(columns = "_merge")
+flores200_token_counts_langinfo = flores200_token_counts_langinfo.drop(columns = "_merge")
 
-assert results_df["speakers"].isna().sum() == 0
+assert flores200_token_counts_langinfo["speakers"].isna().sum() == 0
     # no more missing values in "speakers" column
 
 
 # %% Write results to CSV file
-assert all(results_df.dtypes.isin(["str", "int64", "float64"]))
+assert all(flores200_token_counts_langinfo.dtypes.astype(str).isin(["str", "int64", "float64"]))
     # confirming all columns are either of type str, int64, or float64
-for c in results_df.columns:
-    if results_df[c].dtype == "str":
-        assert results_df[c].str.contains(r",").sum() == 0
+for c in flores200_token_counts_langinfo.columns:
+    if flores200_token_counts_langinfo[c].dtype == "str":
+        assert flores200_token_counts_langinfo[c].str.contains(r",").sum() == 0
     # confirming there are no commas in string columns - safe to save as CSV
 
-results_df.to_csv("02_output_model_experiments/token_counts_flores200.csv", index = False)
+flores200_token_counts_langinfo.to_csv("02_output_model_experiments/flores200_token_counts_langinfo.csv", index = False)
 
 
 # TODO: try roundtrip tokenization to make sure the text is tokenized correctly (for deepseek llama issue)
