@@ -32,7 +32,14 @@ added_models = [
     {"link": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025",      "release_date_str": "March 2025"},
     {"link": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16", "release_date_str": "May 2026"},
     {"link": "https://huggingface.co/openai/gpt-oss-20b",                     "release_date_str": "August 2025"},
+    {"link": "https://huggingface.co/openai/gpt-oss-120b",                    "release_date_str": "August 2025"},  
     {"link": "https://huggingface.co/facebook/nllb-200-3.3B",                 "release_date_str": "July 2022"},
+    {"link": "https://huggingface.co/facebook/nllb-moe-54b",                  "release_date_str": "March 2023"},
+    {"link": "https://huggingface.co/meta-models/Muse-Glimmer-30B",           "release_date_str": "August 2026"},
+    {"link": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",   "release_date_str": "August 2026"},
+    {"link": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",       "release_date_str": "June 2026"},
+    {"link": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",       "release_date_str": "March 2026"},
+    {"link": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-NVFP4",          "release_date_str": "December 2025"},
     ]
 
 added_models = pd.DataFrame(added_models)
