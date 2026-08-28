@@ -39,6 +39,28 @@ google_model_list = ["gemini-3.5-flash"]
 # %% Read FLORES-200 dev data
 flores200_dev = pd.read_table("01_data_processed/flores200_dev.tsv")
 
+
+# %% Check for existing token counts file - avoids full rerun when adding new models
+if os.path.exists("02_output_model_experiments/flores200_token_counts.csv"):
+    old_results_df = pd.read_csv("02_output_model_experiments/flores200_token_counts.csv")
+    model_list = old_results_df["model"].unique().tolist()
+        # get models for which token counts have already been collected
+
+    models_to_drop = list(set(model_list) - set(hf_model_list + openai_model_list + anthropic_model_list + google_model_list))
+        # find eliminated models
+    if len(models_to_drop) > 0:
+        old_results_df = old_results_df.loc[old_results_df["model"].isin(models_to_drop) == False,]
+            # drop eliminated models from data
+
+    hf_model_list = list(set(hf_model_list) - set(model_list))
+    openai_model_list = list(set(openai_model_list) - set(model_list))
+    anthropic_model_list = list(set(anthropic_model_list) - set(model_list))
+    google_model_list = list(set(google_model_list) - set(model_list))
+        # keep newly added models
+else:
+    old_results_df = pd.DataFrame()
+
+
 # %% Loop through each model and get token counts
 results = []
 
@@ -113,13 +135,13 @@ for model in google_model_list:
         result_i = {"model": model, "file": file, "token_count": token_count}
         results.append(result_i)
 
-        
-flores200_token_counts = pd.DataFrame(data = results)
+# Create results DataFrame
+new_results_df = pd.DataFrame(data = results)
+flores200_token_counts = pd.concat(objs = [old_results_df, new_results_df], ignore_index = True)
 
 
 # %% Write results to CSV file
 flores200_token_counts.to_csv("02_output_model_experiments/flores200_token_counts.csv", index = False)
-
 
 
 # %% Add language info
