@@ -1,5 +1,6 @@
 00_data_raw/*
 !00_data_raw/README.md
+!00_data_raw/model_lists/hugging_face_models.csv
 
 01_data_processed/*
 !01_data_processed/.gitkeep
