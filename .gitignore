@@ -1,10 +1,8 @@
-00_data_raw/*
+00_data_raw/**
+!00_data_raw/**/
+!00_data_raw/model_lists/**
+!00_data_raw/**/.gitkeep
 !00_data_raw/README.md
-!00_data_raw/commoncrawl
-!00_data_raw/flores200_dataset
-!00_data_raw/iso_639_3
-!00_data_raw/linguameta
-!00_data_raw/model_lists/
 
 01_data_processed/*
 !01_data_processed/.gitkeep
