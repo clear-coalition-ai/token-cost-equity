@@ -24,7 +24,15 @@ In the `scripts` folder, the scripts in each subfolder `0(N)_*` follow these con
 - Write to data/output folder of the same number: `0(N)_data_*`/`0(N)_output_*`
 
 Analytical results can be reproduced as follows:
-1. Create .env file containing `PROJECT_ROOT = [your filepath here]`
+1. Create .env file with the following:
+ ```
+ANTHROPIC_API_KEY = [your key here] 
+GEMINI_API_KEY = [your key here]
+HF_TOKEN = [your key here]
+PROJECT_ROOT = [your filepath here]
+```
 2. Download the data files listed in `00_data_raw/README.md`
 3. Place the data files in the `00_data_raw` folder
-4. Run the scripts in order
+4. Run all scripts in `scripts/01_process_data`
+5. Run all scripts in `scripts/02_model_experiments`
+6. Run all scripts in `scripts/03_analysis`
