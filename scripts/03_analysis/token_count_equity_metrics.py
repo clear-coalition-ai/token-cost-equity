@@ -18,10 +18,12 @@ os.chdir(PROJECT_ROOT)
 
 
 # %% Clean results DataFrame for plotting and analysis
-results_df = pd.read_csv("02_output_model_experiments/flores200_token_counts_langinfo.csv")
+count_df = pd.read_csv("02_output_model_experiments/flores200_token_counts_langinfo.csv")
+
+N_langs = len(count_df["iso_script"].unique().tolist())
 
 # Get list of models
-model_list = results_df["model"].unique().tolist()
+model_list = count_df["model"].unique().tolist()
 
 # %% Define Gini coefficient function
 def gini(x):
@@ -63,9 +65,9 @@ gini_results = []
 ratio_results = []
 
 for model in model_list:    
-    calc_data = results_df.loc[results_df["model"] == model,]
+    calc_data = count_df.loc[count_df["model"] == model,]
 
-    for N in np.arange(2, 200 + 1, step = 1):
+    for N in np.arange(2, N_langs + 1, step = 1):
         token_count_vector = calc_data.loc[calc_data["cc_spk_rank"] <= N, "token_count"]
 
         # Gini coefficient
@@ -83,7 +85,7 @@ ratio_df = pd.DataFrame(data = ratio_results)
 
 
 # %% Reshape to Wide Format for Results Table
-out_N_list = [5, 10, 20, 50, 100, 150, 200]
+out_N_list = [5, 10, 20, 50, 100, 150, 200, N_langs]
 
 gini_df_long = gini_df.loc[gini_df["N"].isin(out_N_list),]
 gini_df_long["gini"] = gini_df_long["gini"].round(2)
