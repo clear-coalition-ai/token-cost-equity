@@ -9,6 +9,7 @@ Measuring language-related inequities in AI systems
 ├───01_data_processed
 ├───02_output_model_experiments
 ├───03_output_analysis
+├───src
 └───scripts
     ├───01_process_data
     ├───02_model_experiments
