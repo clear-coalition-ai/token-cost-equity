@@ -1,6 +1,6 @@
-# CLEAR Equity Cards
+# Token Cost Equity
 
-Measuring language-related inequities in AI systems
+Measuring differences in tokenization efficiency and cost across languages
 
 ## Repository Structure
 
@@ -9,11 +9,11 @@ Measuring language-related inequities in AI systems
 ├───01_data_processed
 ├───02_output_model_experiments
 ├───03_output_analysis
-├───src
-└───scripts
-    ├───01_process_data
-    ├───02_model_experiments
-    └───03_analysis
+├───scripts
+│   ├───01_process_data
+│   ├───02_model_experiments
+│   └───03_analysis
+└───src
 ```
 
 This repo is structured as a sequential pipeline and contains only code files. 

@@ -1,7 +1,5 @@
 ## Data Sources
 
-### Token Cost Experiment
-
 - List of Models
     - Nothing to download
     - Data provided in `model_lists/hugging_face_models.csv`
@@ -21,8 +19,3 @@
 - ISO 639-3
     - Download ISO 639-3 macrolanguage mappings from https://iso639-3.sil.org/code_tables/download_tables
     - Place data in `iso_639_3` folder
-
-
-### Model Performance Experiment
-
-CLEAR Benchmarking Team - downloaded all files in `scores` folder from https://huggingface.co/datasets/African-Languages-Lab/proxy-mt-benchmark-scores
