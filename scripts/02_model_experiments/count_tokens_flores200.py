@@ -7,8 +7,9 @@ import os
 import anthropic
 from dotenv import load_dotenv
 import google.genai
+import openai
 import pandas as pd
-import tiktoken
+#import tiktoken
 from transformers import AutoTokenizer
 
 
@@ -27,14 +28,10 @@ hf_model_list = hf_models["tokenizer_repo_id"].tolist()
 hf_remote_code_list = ["moonshotai/Kimi-K3"]
     # requires `trust_remote_code = True` to run
 
-openai_model_list = ["gpt-5"]
-
-anthropic_model_list = ["claude-fable-5"]
-    # "claude-opus-4-8" appears to have same tokenizer
-
-google_model_list = ["gemini-3.5-flash"]
-    # gemini-2.5-pro and gemini-3.1-pro-preview appear to have same tokenizer
-
+openai_model_list = ["gpt-5", "gpt-6-astra"]
+anthropic_model_list = ["claude-opus-4-8", "claude-fable-5"]  
+google_model_list = ["gemini-3.1-pro-preview", "gemini-3.8-flash"]
+    
 
 # %% Read FLORES-200 dev data
 flores200_dev = pd.read_table("01_data_processed/flores200_dev.tsv")
@@ -85,21 +82,39 @@ for model in hf_model_list:
         results.append(result_i)
 
 # OpenAI closed-source models
+#for model in openai_model_list:
+#    print(f"Working on model: {model}") 
+#    tokenizer = tiktoken.encoding_for_model(model)
+#
+#    for row_index, row_data in flores200_dev.iterrows():
+#        file = row_data["file"]
+#        text = row_data["text"]
+#                
+#        # Tokenize data
+#        tokens = tokenizer.encode(text)
+#        token_count = len(tokens)
+#        
+#        # Append results for this iteration in results list
+#        result_i = {"model": model, "file": file, "token_count": token_count}
+#        results.append(result_i)
+
+
+client = openai.OpenAI()
 for model in openai_model_list:
     print(f"Working on model: {model}") 
-    tokenizer = tiktoken.encoding_for_model(model)
 
     for row_index, row_data in flores200_dev.iterrows():
         file = row_data["file"]
         text = row_data["text"]
                 
         # Tokenize data
-        tokens = tokenizer.encode(text)
-        token_count = len(tokens)
+        response = client.responses.input_tokens.count(model = model, input = text)
+        token_count = response.input_tokens
         
         # Append results for this iteration in results list
         result_i = {"model": model, "file": file, "token_count": token_count}
         results.append(result_i)
+
 
 # Anthropic closed-source models
 client = anthropic.Anthropic()
@@ -168,4 +183,5 @@ for c in flores200_token_counts_langinfo.columns:
 flores200_token_counts_langinfo.to_csv("02_output_model_experiments/flores200_token_counts_langinfo.csv", index = False)
 
 
-# TODO: try roundtrip tokenization to make sure the text is tokenized correctly (for deepseek llama issue)
+# TODO: try roundtrip tokenization to make sure the text is tokenized correctly (for deepseek llama issue, UNK tokens)
+# TODO: pin version for Hugging Face models with trust_remote_code = True
