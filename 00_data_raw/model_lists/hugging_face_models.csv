@@ -50,8 +50,10 @@ https://huggingface.co/tiiuae/Falcon3-10B-Instruct,December 2024,,tokenizer.json
 https://huggingface.co/tiiuae/Falcon3-3B-Instruct,December 2024,,tokenizer.json
 https://huggingface.co/tiiuae/Falcon3-7B-Instruct,December 2024,,tokenizer.json
 https://huggingface.co/zai-org/GLM-5.2,June 2026,,tokenizer.json
+https://huggingface.co/zai-org/GLM-5.3,August 2026,,tokenizer.json
 https://huggingface.co/moonshotai/Kimi-K3,July 2026,,tiktoken.model
 https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash,April 2026,,tokenizer.json
+https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash,September 2026,,tokenizer.json
 https://huggingface.co/CohereLabs/c4ai-command-a-03-2025,March 2025,,tokenizer.json
 https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16,May 2026,,tokenizer.json
 https://huggingface.co/openai/gpt-oss-20b,August 2025,,tokenizer.json
