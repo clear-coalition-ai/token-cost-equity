@@ -30,6 +30,7 @@ Analytical results can be reproduced as follows:
 ANTHROPIC_API_KEY = [your key here] 
 GEMINI_API_KEY = [your key here]
 HF_TOKEN = [your key here]
+OPENAI_API_KEY = [your key here]
 PROJECT_ROOT = [your filepath here]
 ```
 2. Download the data files listed in `00_data_raw/README.md`
