@@ -6,6 +6,11 @@ Measuring differences in tokenization efficiency and cost across languages
 
 ```
 ├───00_data_raw
+│   ├───commoncrawl
+│   ├───flores200_dataset
+│   ├───iso_639_3
+│   ├───linguameta
+│   └───model_lists
 ├───01_data_processed
 ├───02_output_model_experiments
 ├───03_output_analysis
@@ -24,6 +29,9 @@ In the `scripts` folder, the scripts in each subfolder `0(N)_*` follow these con
 - Read from data/output folder of same or lower number: `0(M)_data_*`/`0(M)_output_*` where `M <= N`
 - Write to data/output folder of the same number: `0(N)_data_*`/`0(N)_output_*`
 
+
+## Reproducibility
+
 Analytical results can be reproduced as follows:
 1. Create .env file with the following:
  ```
@@ -34,7 +42,10 @@ OPENAI_API_KEY = [your key here]
 PROJECT_ROOT = [your filepath here]
 ```
 2. Download the data files listed in `00_data_raw/README.md`
-3. Place the data files in the `00_data_raw` folder
-4. Run all scripts in `scripts/01_process_data`
-5. Run all scripts in `scripts/02_model_experiments`
-6. Run all scripts in `scripts/03_analysis`
+3. Place the data files in the appropriate subfolders within `00_data_raw`
+4. Run `scripts/run_all.py`
+
+
+## Evaluating Additional Models
+
+The `src/evaluate_equity.py` script is provided to evaluate token cost equity for additional models.
