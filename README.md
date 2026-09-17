@@ -52,6 +52,9 @@ The `src/evaluate_equity.py` script is provided to evaluate token cost equity fo
 
 The script retrieves FLORES-200 from https://huggingface.co/datasets/facebook/flores, which is a gated repo.
 
-Example usage:
-`python src/evaluate_equity.py "hf:Qwen/Qwen3.8-27B" --split "dev" --languages "eng_Latn" "zho_Hans"`
+### Example usage:
+`python src/evaluate_equity.py "hf:Qwen/Qwen3.6-27B" --split "dev"`
+- Replicates results for a model already included in the analysis
 
+`python src/evaluate_equity.py "hf:Qwen/Qwen3.8-27B" --languages "eng_Latn" "zho_Hans"`
+- Test a new model on a subset of languages
