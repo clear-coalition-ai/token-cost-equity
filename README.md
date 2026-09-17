@@ -48,4 +48,10 @@ PROJECT_ROOT = [your filepath here]
 
 ## Evaluating Additional Models
 
-The `src/evaluate_equity.py` script is provided to evaluate token cost equity for additional models.
+The `src/evaluate_equity.py` script is provided to evaluate token cost equity for additional models using FLORES-200.
+
+The script retrieves FLORES-200 from https://huggingface.co/datasets/facebook/flores, which is a gated repo.
+
+Example usage:
+`python src/evaluate_equity.py "hf:Qwen/Qwen3.8-27B" --split "dev" --languages "eng_Latn" "zho_Hans"`
+
