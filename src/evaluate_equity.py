@@ -32,29 +32,32 @@ FLORES_REPO = "facebook/flores"
 # %% Data loading
 def load_flores200(split: str, languages: list[str] | None = None) -> pd.DataFrame:
     """Load FLORES-200 segments from facebook/flores.
-
     split: 'dev' or 'devtest'.
     languages: FLORES language codes (e.g. 'eng_Latn') to load;
-        loads all available languages if None/empty.
+        loads all available languages if languages = "all" or language argument not provided
     Returns columns: [lang, segment_id, text]
     """
-    if not languages:
-        # facebook/flores exposes both single-language configs (e.g. "eng_Latn")
-        # and paired translation configs (e.g. "eng_Latn-ary_Arab"). We only
-        # want the single-language ones, which contain no hyphen.
-        all_configs = get_dataset_config_names(FLORES_REPO)
-        languages = [c for c in all_configs if "-" not in c]
+    # facebook/flores provides the following:
+    #   Single-language data files (e.g. "eng_Latn") in long format
+    #   Paired translation data files (e.g. "eng_Latn-ary_Arab") in wide format
+    #   An "all" data file in wide format
+    # Special case: ISO 639-3 "ajp" has been deprecated (merged with "apc") since the release of FLORES-200, "ajp" excluded from this eval
+    
+    if (not languages) or (languages == "all"):
+        df = load_dataset(FLORES_REPO, "all", split = split).to_pandas()
+        df = df.drop(columns = ["URL", "domain", "topic", "has_image", "has_hyperlink", "sentence_ajp_Arab"])
+        df = pd.wide_to_long(df = df, stubnames = "sentence", i = "id", j = "lang", sep = "_", suffix = ".+").reset_index(drop = False)
 
-    frames = []
-    for lang in languages:
-        ds = load_dataset(FLORES_REPO, lang, split=split)
-        frame = ds.to_pandas()[["id", "sentence"]].rename(
-            columns={"id": "segment_id", "sentence": "text"}
-        )
-        frame["lang"] = lang
-        frames.append(frame)
+    else:
+        df = pd.DataFrame()
+        for lang in languages:
+            df_i = load_dataset(FLORES_REPO, lang, split=split).to_pandas()
+            df_i = df_i[["id", "sentence"]]
+            df_i["lang"] = lang
+            df = pd.concat(objs = [df, df_i], ignore_index = True)
 
-    return pd.concat(frames, ignore_index=True)[["lang", "segment_id", "text"]]
+    df = df.rename(columns = {"id": "segment_id", "sentence": "text"})            
+    return df
 
 
 # %% Token counting
