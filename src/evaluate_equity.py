@@ -34,7 +34,7 @@ def load_flores200(split: str, languages: list[str] | None = None) -> pd.DataFra
     """Load FLORES-200 segments from facebook/flores.
     split: 'dev' or 'devtest'.
     languages: FLORES language codes (e.g. 'eng_Latn') to load;
-        loads all available languages if languages = "all" or language argument not provided
+        loads all available languages if languages = "all" or language argument not provided 
     Returns columns: [lang, segment_id, text]
     """
     # facebook/flores provides the following:
@@ -56,7 +56,8 @@ def load_flores200(split: str, languages: list[str] | None = None) -> pd.DataFra
             df_i["lang"] = lang
             df = pd.concat(objs = [df, df_i], ignore_index = True)
 
-    df = df.rename(columns = {"id": "segment_id", "sentence": "text"})            
+    df = df.groupby("lang").agg(text = ("sentence", "\n".join))
+    
     return df
 
 
@@ -150,15 +151,8 @@ def count_tokens_for_dataset(df: pd.DataFrame, counter: TokenCounter) -> pd.Data
     """Adds an n_tokens column, one value per segment."""
     df = df.copy()
     df["n_tokens"] = counter.count_batch(df["text"].tolist())
+    df = df.reset_index(drop = False)
     return df
-
-
-def aggregate_by_language(df: pd.DataFrame, agg: str = "sum") -> pd.DataFrame:
-    """Aggregate token counts per language."""
-    sizes = df.groupby("lang").size()
-    if sizes.nunique() > 1:
-        print(f"Warning: uneven segment counts per language:\n{sizes[sizes != sizes.median()]}")
-    return df.groupby("lang")["n_tokens"].agg(agg).reset_index(name="n_tokens_agg")
 
 
 @dataclass
@@ -171,12 +165,12 @@ class EquityResult:
 
 
 def compute_equity_ratio(totals: pd.DataFrame) -> EquityResult:
-    max_row = totals.loc[totals["n_tokens_agg"].idxmax()]
-    min_row = totals.loc[totals["n_tokens_agg"].idxmin()]
+    max_row = totals.loc[totals["n_tokens"].idxmax(), ["lang", "n_tokens"]]
+    min_row = totals.loc[totals["n_tokens"].idxmin(), ["lang", "n_tokens"]]
     return EquityResult(
-        ratio=max_row["n_tokens_agg"] / min_row["n_tokens_agg"],
-        max_language=max_row["lang"], max_tokens=max_row["n_tokens_agg"],
-        min_language=min_row["lang"], min_tokens=min_row["n_tokens_agg"],
+        ratio=max_row["n_tokens"] / min_row["n_tokens"],
+        max_language=max_row["lang"], max_tokens=max_row["n_tokens"],
+        min_language=min_row["lang"], min_tokens=min_row["n_tokens"],
     )
 
 
@@ -188,11 +182,10 @@ def run_evaluation(
 ) -> EquityResult:
     df = load_flores200(split, languages)
     counter = load_token_counter(model_id)
-    df = count_tokens_for_dataset(df, counter)
-    totals = aggregate_by_language(df)
+    token_counts_by_language = count_tokens_for_dataset(df, counter)
     if save_path:
-        totals.to_csv(save_path, index=False)
-    return compute_equity_ratio(totals)
+        token_counts_by_language.to_csv(save_path, index=False)
+    return compute_equity_ratio(token_counts_by_language)
 
 
 # %% Evaluation procedure
