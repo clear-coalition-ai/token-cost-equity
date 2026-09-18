@@ -61,11 +61,16 @@ The script retrieves FLORES-200 from https://huggingface.co/datasets/facebook/fl
 | `languages` | FLORES-200 language-script codes or `"all"` | Optional, default is all languages | Subset of FLORES-200 languages to use |
 
 ### Example Usage (CLI):
-`python src/evaluate_equity.py "hf:moonshotai/Kimi-K3" --split "dev"`
-- Replicates results for a model already included in the analysis
-
+Evaluate model on all FLORES-200 languages using `dev` split:\
+`python src/evaluate_equity.py "hf:meta-llama/Llama-4-Scout-17B-16E-Instruct" --split "dev"`
+ 
+Evaluate model on a subset of FLORES-200 languages:\
 `python src/evaluate_equity.py "hf:Qwen/Qwen3.8-27B" --languages "eng_Latn" "zho_Hans"`
-- Evaluate a model on a subset of languages
 
-`python src/evaluate_equity.py "openai:gpt-5" --output "my_folder/gpt5_token_counts.csv"`
-- Evaluate a model and save token counts to CSV file
+Evaluate model and output token counts by language to CSV file:\
+`python src/evaluate_equity.py "openai:gpt-5" --output "my_folder/token_counts_by_language.csv"`
+
+### Advanced Cases
+For models requiring special arguments, call the functions directly in Python instead of using CLI.
+
+Example: Moonshot AI's [Kimi K3](https://huggingface.co/moonshotai/Kimi-K3) requires `trust_remote_code = True`
