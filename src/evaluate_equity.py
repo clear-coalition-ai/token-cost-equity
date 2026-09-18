@@ -57,6 +57,7 @@ def load_flores200(split: str, languages: list[str] | None = None) -> pd.DataFra
             df = pd.concat(objs = [df, df_i], ignore_index = True)
 
     df = df.groupby("lang").agg(text = ("sentence", "\n".join))
+    df = df.reset_index(drop = False)
     
     return df
 
@@ -147,12 +148,12 @@ def load_token_counter(model_id: str, **kwargs) -> TokenCounter:
 
 
 # %% Pipeline
-def count_tokens_for_dataset(df: pd.DataFrame, counter: TokenCounter) -> pd.DataFrame:
+def count_tokens(df: pd.DataFrame, counter: TokenCounter) -> pd.DataFrame:
     """Adds an n_tokens column, one value per segment."""
-    df = df.copy()
-    df["n_tokens"] = counter.count_batch(df["text"].tolist())
-    df = df.reset_index(drop = False)
-    return df
+    tc = df.copy()
+    tc["n_tokens"] = counter.count_batch(tc["text"].tolist())
+    tc = tc[["lang", "n_tokens"]]
+    return tc
 
 
 @dataclass
@@ -164,9 +165,9 @@ class EquityResult:
     min_tokens: float
 
 
-def compute_equity_ratio(totals: pd.DataFrame) -> EquityResult:
-    max_row = totals.loc[totals["n_tokens"].idxmax(), ["lang", "n_tokens"]]
-    min_row = totals.loc[totals["n_tokens"].idxmin(), ["lang", "n_tokens"]]
+def compute_equity_ratio(token_counts: pd.DataFrame) -> EquityResult:
+    max_row = token_counts.loc[token_counts["n_tokens"].idxmax(),["lang", "n_tokens"]]
+    min_row = token_counts.loc[token_counts["n_tokens"].idxmin(),["lang", "n_tokens"]]
     return EquityResult(
         ratio=max_row["n_tokens"] / min_row["n_tokens"],
         max_language=max_row["lang"], max_tokens=max_row["n_tokens"],
@@ -182,7 +183,7 @@ def run_evaluation(
 ) -> EquityResult:
     df = load_flores200(split, languages)
     counter = load_token_counter(model_id)
-    token_counts_by_language = count_tokens_for_dataset(df, counter)
+    token_counts_by_language = count_tokens(df, counter)
     if save_path:
         token_counts_by_language.to_csv(save_path, index=False)
     return compute_equity_ratio(token_counts_by_language)
