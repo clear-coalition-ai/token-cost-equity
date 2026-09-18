@@ -54,10 +54,10 @@ The script retrieves FLORES-200 from https://huggingface.co/datasets/facebook/fl
 
 | Argument | Supported Values | Usage | Description |
 | :------  | :--------------- | :---- | :---------- |
-| `model_id` | See below | Required | Model to evaluate |
+| `model_id` | Hugging Face model prefixed with `hf:`\nOpenAI model prefixed with `openai:`\n`Anthropic model prefixed with `anthropic:`\nGoogle model prefixed with `google:` | Required | Model to evaluate |
 | `split` | `dev` or `devtest` | Optional, default is `devtest` | FLORES-200 split to use |
 | `output` | Filepath | Optional, default is `None` | Saves detailed results to CSV files |
-| `languages` | FLORES-200 language-script code or `"all"` | Optional, default is all languages | Subset of FLORES-200 languages to use |
+| `languages` | FLORES-200 language-script codes or `"all"` | Optional, default is all languages | Subset of FLORES-200 languages to use |
 
 ### Example usage:
 `python src/evaluate_equity.py "hf:Qwen/Qwen3.6-27B" --split "dev"`
