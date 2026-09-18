@@ -67,5 +67,5 @@ The script retrieves FLORES-200 from https://huggingface.co/datasets/facebook/fl
 `python src/evaluate_equity.py "hf:Qwen/Qwen3.8-27B" --languages "eng_Latn" "zho_Hans"`
 - Evaluate a model on a subset of languages
 
-`python src/evaluate_equity.py "openai:gpt-5" --output "my_folder/gpt5_token_counts.csv"
+`python src/evaluate_equity.py "openai:gpt-5" --output "my_folder/gpt5_token_counts.csv"`
 - Evaluate a model and save token counts to CSV file
