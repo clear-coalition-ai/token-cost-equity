@@ -52,16 +52,20 @@ The `src/evaluate_equity.py` script is provided to evaluate token cost equity fo
 
 The script retrieves FLORES-200 from https://huggingface.co/datasets/facebook/flores, which is a gated repo.
 
+### Arguments
 | Argument | Supported Values | Usage | Description |
 | :------  | :--------------- | :---- | :---------- |
-| `model_id` | Hugging Face model prefixed with `hf:`\nOpenAI model prefixed with `openai:`\n`Anthropic model prefixed with `anthropic:`\nGoogle model prefixed with `google:` | Required | Model to evaluate |
+| `model_id` | Hugging Face model prefixed with `hf:`<br>OpenAI model prefixed with `openai:`<br>Anthropic model prefixed with `anthropic:`<br>Google model prefixed with `google:` | Required | Model to evaluate |
 | `split` | `dev` or `devtest` | Optional, default is `devtest` | FLORES-200 split to use |
 | `output` | Filepath | Optional, default is `None` | Saves detailed results to CSV files |
 | `languages` | FLORES-200 language-script codes or `"all"` | Optional, default is all languages | Subset of FLORES-200 languages to use |
 
-### Example usage:
-`python src/evaluate_equity.py "hf:Qwen/Qwen3.6-27B" --split "dev"`
+### Example Usage (CLI):
+`python src/evaluate_equity.py "hf:moonshotai/Kimi-K3" --split "dev"`
 - Replicates results for a model already included in the analysis
 
 `python src/evaluate_equity.py "hf:Qwen/Qwen3.8-27B" --languages "eng_Latn" "zho_Hans"`
-- Test a new model on a subset of languages
+- Evaluate a model on a subset of languages
+
+`python src/evaluate_equity.py "openai:gpt-5" --output "my_folder/gpt5_token_counts.csv"
+- Evaluate a model and save token counts to CSV file
