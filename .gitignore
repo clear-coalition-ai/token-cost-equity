@@ -7,10 +7,4 @@
 01_data_processed/*
 !01_data_processed/.gitkeep
 
-02_output_model_experiments/*
-!02_output_model_experiments/.gitkeep
-
-03_output_analysis/*
-!03_output_analysis/.gitkeep
-
 .env

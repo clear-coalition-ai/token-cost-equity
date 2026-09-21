@@ -1,0 +1,204 @@
+iso_script,name,model_rank1,model_rank2,model_rank3
+ace_Arab,Achinese,gemini-3.8-flash, claude-fable-5, CohereLabs/tiny-aya-base
+ace_Latn,Achinese,CohereLabs/tiny-aya-base, gemini-3.8-flash, claude-fable-5
+acm_Arab,Mesopotamian Arabic,CohereLabs/tiny-aya-base, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+acq_Arab,Ta'Izzi-Adeni Arabic,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, CohereLabs/tiny-aya-base
+aeb_Arab,Tunisian Arabic,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, CohereLabs/tiny-aya-base
+afr_Latn,Afrikaans,gpt-6-astra, CohereLabs/tiny-aya-base, CohereLabs/c4ai-command-a-03-2025
+aka_Latn,Twi,gpt-6-astra, gemini-3.8-flash, meta-llama/Llama-2-7b-hf
+als_Latn,Tosk Albanian,meta-models/Muse-Glimmer-30B, claude-fable-5, gpt-6-astra
+amh_Ethi,Amharic,gemini-3.8-flash, CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B
+apc_Arab,North Levantine Arabic,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, CohereLabs/tiny-aya-base
+arb_Arab,Standard Arabic,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, CohereLabs/tiny-aya-base
+arb_Latn,Standard Arabic,claude-fable-5, CohereLabs/tiny-aya-base, gpt-6-astra
+ars_Arab,Najdi Arabic,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, CohereLabs/tiny-aya-base
+ary_Arab,Moroccan Arabic,CohereLabs/tiny-aya-base, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+arz_Arab,Egyptian Arabic,CohereLabs/tiny-aya-base, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+asm_Beng,Assamese,gemini-3.8-flash, gpt-6-astra, deepseek-ai/DeepSeek-V4.1-Flash
+ast_Latn,Asturian,CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base, claude-fable-5
+awa_Deva,Awadhi,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+ayr_Latn,Central Aymara,claude-fable-5, CohereLabs/tiny-aya-base, gpt-6-astra
+azb_Arab,South Azerbaijani,gemini-3.8-flash, CohereLabs/tiny-aya-base, mistralai/Ministral-3-8B-Instruct-2512
+azj_Latn,North Azerbaijani,gpt-6-astra, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+bak_Cyrl,Bashkir,gpt-6-astra, claude-fable-5, gemini-3.8-flash
+bam_Latn,Bambara,meta-llama/Llama-2-7b-hf, gpt-6-astra, gemini-3.8-flash
+ban_Latn,Balinese,CohereLabs/tiny-aya-base, gemini-3.8-flash, CohereLabs/c4ai-command-a-03-2025
+bel_Cyrl,Belarusian,claude-fable-5, gpt-6-astra, gemini-3.8-flash
+bem_Latn,Bemba,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+ben_Beng,Bengali,gemini-3.8-flash, gpt-6-astra, CohereLabs/command-a-plus-05-2026-bf16
+bho_Deva,Bhojpuri,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+bjn_Arab,Banjar,gemini-3.8-flash, CohereLabs/tiny-aya-base, claude-fable-5
+bjn_Latn,Banjar,CohereLabs/tiny-aya-base, gemini-3.8-flash, CohereLabs/command-a-plus-05-2026-bf16
+bod_Tibt,Tibetan,gemini-3.8-flash, claude-fable-5, moonshotai/Kimi-K3
+bos_Latn,Bosnian,CohereLabs/tiny-aya-base, gemini-3.8-flash, claude-fable-5
+bug_Latn,Buginese,claude-fable-5, CohereLabs/tiny-aya-base, gemini-3.8-flash
+bul_Cyrl,Bulgarian,claude-fable-5, meta-models/Muse-Glimmer-30B, CohereLabs/tiny-aya-base
+cat_Latn,Catalan,claude-fable-5, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+ceb_Latn,Cebuano,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+ces_Latn,Czech,CohereLabs/command-a-plus-05-2026-bf16, CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base
+cjk_Latn,Chokwe,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+ckb_Arab,Sorani Kurdish,gemini-3.8-flash, claude-fable-5, meta-models/Muse-Glimmer-30B
+crh_Latn,Crimean Tatar,CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B
+cym_Latn,Welsh,gpt-6-astra, CohereLabs/tiny-aya-base, claude-fable-5
+dan_Latn,Danish,CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16, claude-fable-5
+deu_Latn,German,CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B, CohereLabs/command-a-plus-05-2026-bf16
+dik_Latn,Southwestern Dinka,meta-llama/Llama-2-7b-hf, gemini-3.8-flash, claude-fable-5
+dyu_Latn,Dyula,claude-fable-5, CohereLabs/tiny-aya-base, gemini-3.8-flash
+dzo_Tibt,Dzongkha,gemini-3.8-flash, claude-fable-5, moonshotai/Kimi-K3
+ell_Grek,Greek,CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16
+eng_Latn,English,CohereLabs/c4ai-command-a-03-2025, CohereLabs/command-a-plus-05-2026-bf16, CohereLabs/tiny-aya-base
+epo_Latn,Esperanto,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, gpt-6-astra
+est_Latn,Estonian,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+eus_Latn,Basque,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, CohereLabs/tiny-aya-base
+ewe_Latn,Ewe,gemini-3.8-flash, claude-fable-5, meta-llama/Llama-2-7b-hf
+fao_Latn,Faroese,claude-fable-5, gpt-6-astra, gemini-3.8-flash
+fij_Latn,Fijian,gpt-6-astra, CohereLabs/tiny-aya-base, claude-fable-5
+fin_Latn,Finnish,CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16, gpt-6-astra
+fon_Latn,Fon,gemini-3.8-flash, meta-llama/Llama-2-7b-hf, CohereLabs/c4ai-command-a-03-2025
+fra_Latn,French,mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4, CohereLabs/c4ai-command-a-03-2025
+fur_Latn,Friulian,claude-fable-5, CohereLabs/tiny-aya-base, meta-llama/Llama-2-7b-hf
+fuv_Latn,Nigerian Fulfulde,claude-fable-5, gpt-6-astra, gemini-3.8-flash
+gaz_Latn,West Central Oromo,gpt-6-astra, claude-fable-5, CohereLabs/tiny-aya-base
+gla_Latn,Scots Gaelic,gpt-6-astra, claude-fable-5, gemini-3.8-flash
+gle_Latn,Irish,gpt-6-astra, CohereLabs/tiny-aya-base, claude-fable-5
+glg_Latn,Galician,CohereLabs/tiny-aya-base, CohereLabs/c4ai-command-a-03-2025, mistralai/Ministral-3-8B-Instruct-2512
+grn_Latn,Guarani,gpt-6-astra, claude-fable-5, CohereLabs/tiny-aya-base
+guj_Gujr,Gujarati,gpt-6-astra, gemini-3.8-flash, meta-models/Muse-Glimmer-30B
+hat_Latn,Haitian Creole,gpt-6-astra, gemini-3.8-flash, CohereLabs/tiny-aya-base
+hau_Latn,Hausa,gpt-6-astra, gemini-3.8-flash, CohereLabs/tiny-aya-base
+heb_Hebr,Hebrew,CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16
+hin_Deva,Hindi,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+hne_Deva,Chhattisgarhi,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+hrv_Latn,Croatian,CohereLabs/tiny-aya-base, claude-fable-5, gemini-3.8-flash
+hun_Latn,Hungarian,CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B, claude-fable-5
+hye_Armn,Armenian,gpt-6-astra, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+ibo_Latn,Igbo,gpt-6-astra, CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B
+ilo_Latn,Ilocano,CohereLabs/tiny-aya-base, gemini-3.8-flash, gpt-6-astra
+ind_Latn,Indonesian,CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16, CohereLabs/c4ai-command-a-03-2025
+isl_Latn,Icelandic,claude-fable-5, gpt-6-astra, gemini-3.8-flash
+ita_Latn,Italian,CohereLabs/tiny-aya-base, CohereLabs/c4ai-command-a-03-2025, CohereLabs/command-a-plus-05-2026-bf16
+jav_Latn,Javanese,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+jpn_Jpan,Japanese,CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16, gemini-3.8-flash
+kab_Latn,Kabyle,meta-llama/Llama-2-7b-hf, claude-fable-5, gemini-3.8-flash
+kac_Latn,Kachin,CohereLabs/tiny-aya-base, gemini-3.8-flash, gpt-6-astra
+kam_Latn,Kamba,CohereLabs/tiny-aya-base, gemini-3.8-flash, gpt-6-astra
+kan_Knda,Kannada,gemini-3.8-flash, gpt-6-astra, mistralai/Ministral-3-8B-Instruct-2512
+kas_Arab,Kashmiri,gemini-3.8-flash, CohereLabs/tiny-aya-base, gpt-6-astra
+kas_Deva,Kashmiri,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+kat_Geor,Georgian,gpt-6-astra, meta-models/Muse-Glimmer-30B, gemini-3.8-flash
+kaz_Cyrl,Kazakh,gpt-6-astra, claude-fable-5, meta-models/Muse-Glimmer-30B
+kbp_Latn,Kabiyè,gemini-3.8-flash, Qwen/Qwen3-8B, meta-llama/Llama-2-7b-hf
+kea_Latn,Kabuverdianu,CohereLabs/tiny-aya-base, CohereLabs/c4ai-command-a-03-2025, claude-fable-5
+khk_Cyrl,Halh Mongolian,gpt-6-astra, meta-models/Muse-Glimmer-30B, claude-fable-5
+khm_Khmr,Khmer,gemini-3.8-flash, meta-models/Muse-Glimmer-30B, gpt-6-astra
+kik_Latn,Kikuyu,meta-llama/Llama-2-7b-hf, CohereLabs/tiny-aya-base, gemini-3.8-flash
+kin_Latn,Kinyarwanda,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+kir_Cyrl,Kyrgyz,gpt-6-astra, claude-fable-5, gemini-3.8-flash
+kmb_Latn,Kimbundu,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+kmr_Latn,Northern Kurdish,claude-fable-5, gemini-3.8-flash, CohereLabs/tiny-aya-base
+knc_Arab,Central Kanuri,gemini-3.8-flash, claude-fable-5, mistralai/Ministral-3-8B-Instruct-2512
+knc_Latn,Central Kanuri,gemini-3.8-flash, claude-fable-5, meta-llama/Llama-2-7b-hf
+kon_Latn,Kongo,CohereLabs/tiny-aya-base, gpt-6-astra, CohereLabs/c4ai-command-a-03-2025
+kor_Hang,Korean,CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16, CohereLabs/c4ai-command-a-03-2025
+lao_Laoo,Lao,gemini-3.8-flash, CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B
+lij_Latn,Ligurian,claude-fable-5, CohereLabs/tiny-aya-base, meta-llama/Llama-2-7b-hf
+lim_Latn,Limburgan,gpt-6-astra, CohereLabs/tiny-aya-base, claude-fable-5
+lin_Latn,Lingala,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+lit_Latn,Lithuanian,CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B, claude-fable-5
+lmo_Latn,Lombard,claude-fable-5, meta-llama/Llama-2-7b-hf, gpt-6-astra
+ltg_Latn,Latgalian,claude-fable-5, CohereLabs/tiny-aya-base, gemini-3.8-flash
+ltz_Latn,Luxembourgish,gpt-6-astra, meta-llama/Llama-2-7b-hf, gemini-3.8-flash
+lua_Latn,Luba-Lulua,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+lug_Latn,Luganda,gpt-6-astra, CohereLabs/tiny-aya-base, claude-fable-5
+luo_Latn,Luo,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+lus_Latn,Mizo,claude-fable-5, gemini-3.8-flash, CohereLabs/tiny-aya-base
+lvs_Latn,Standard Latvian,CohereLabs/tiny-aya-base, claude-fable-5, meta-models/Muse-Glimmer-30B
+mag_Deva,Magahi,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+mai_Deva,Maithili,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+mal_Mlym,Malayalam,gemini-3.8-flash, gpt-6-astra, mistralai/Ministral-3-8B-Instruct-2512
+mar_Deva,Marathi,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+min_Arab,Minangkabau,gemini-3.8-flash, CohereLabs/tiny-aya-base, claude-fable-5
+min_Latn,Minangkabau,CohereLabs/tiny-aya-base, gemini-3.8-flash, CohereLabs/c4ai-command-a-03-2025
+mkd_Cyrl,Macedonian,claude-fable-5, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+mlt_Latn,Maltese,gpt-6-astra, CohereLabs/tiny-aya-base, claude-fable-5
+mni_Beng,Meiteilon (Manipuri),gemini-3.8-flash, claude-fable-5, gpt-6-astra
+mos_Latn,Mossi,claude-fable-5, gemini-3.8-flash, CohereLabs/tiny-aya-base
+mri_Latn,Maori,gpt-6-astra, claude-fable-5, gemini-3.8-flash
+mya_Mymr,Myanmar (Burmese),gemini-3.8-flash, meta-models/Muse-Glimmer-30B, gpt-6-astra
+nld_Latn,Dutch,gpt-6-astra, CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base
+nno_Latn,Norwegian Nynorsk,CohereLabs/tiny-aya-base, gpt-6-astra, claude-fable-5
+nob_Latn,Norwegian Bokmål,CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16, gpt-6-astra
+npi_Deva,Nepali,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+nso_Latn,Sepedi,gpt-6-astra, claude-fable-5, CohereLabs/tiny-aya-base
+nus_Latn,Nuer,meta-llama/Llama-2-7b-hf, gemini-3.8-flash, CohereLabs/command-a-plus-05-2026-bf16
+nya_Latn,Chichewa,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+oci_Latn,Occitan,claude-fable-5, gpt-6-astra, CohereLabs/tiny-aya-base
+ory_Orya,Odia,gemini-3.8-flash, Qwen/Qwen3.6-35B-A3B, gpt-6-astra
+pag_Latn,Pangasinan,CohereLabs/tiny-aya-base, gemini-3.8-flash, gpt-6-astra
+pan_Guru,Punjabi,gpt-6-astra, gemini-3.8-flash, CohereLabs/command-a-plus-05-2026-bf16
+pap_Latn,Papiamento,CohereLabs/tiny-aya-base, claude-fable-5, gemini-3.8-flash
+pbt_Arab,Southern Pashto,gpt-6-astra, gemini-3.8-flash, mistralai/Ministral-3-8B-Instruct-2512
+pes_Arab,Iranian Persian,gemini-3.8-flash, mistralai/Ministral-3-8B-Instruct-2512, nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4
+plt_Latn,Plateau Malagasy,gpt-6-astra, CohereLabs/tiny-aya-base, claude-fable-5
+pol_Latn,Polish,CohereLabs/c4ai-command-a-03-2025, meta-models/Muse-Glimmer-30B, CohereLabs/tiny-aya-base
+por_Latn,Portuguese,CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B
+prs_Arab,Dari,CohereLabs/tiny-aya-base, CohereLabs/c4ai-command-a-03-2025, gemini-3.8-flash
+quy_Latn,Ayacucho Quechua,CohereLabs/tiny-aya-base, gemini-3.8-flash, claude-fable-5
+ron_Latn,Romanian,CohereLabs/c4ai-command-a-03-2025, meta-models/Muse-Glimmer-30B, CohereLabs/tiny-aya-base
+run_Latn,Rundi,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+rus_Cyrl,Russian,meta-models/Muse-Glimmer-30B, CohereLabs/c4ai-command-a-03-2025, claude-fable-5
+sag_Latn,Sango,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+san_Deva,Sanskrit,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+sat_Olck,Santali,gemini-3.8-flash, deepseek-ai/DeepSeek-V4.1-Flash, moonshotai/Kimi-K3
+scn_Latn,Sicilian,claude-fable-5, CohereLabs/tiny-aya-base, gemini-3.8-flash
+shn_Mymr,Shan,gemini-3.8-flash, moonshotai/Kimi-K3, zai-org/GLM-5.3
+sin_Sinh,Sinhala,gemini-3.8-flash, gpt-6-astra, meta-models/Muse-Glimmer-30B
+slk_Latn,Slovak,CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B, claude-fable-5
+slv_Latn,Slovenian,CohereLabs/tiny-aya-base, claude-fable-5, gpt-6-astra
+smo_Latn,Samoan,gpt-6-astra, claude-fable-5, CohereLabs/tiny-aya-base
+sna_Latn,Shona,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+snd_Arab,Sindhi,gpt-6-astra, gemini-3.8-flash, meta-models/Muse-Glimmer-30B
+som_Latn,Somali,gpt-6-astra, gemini-3.8-flash, meta-models/Muse-Glimmer-30B
+sot_Latn,Sesotho,gpt-6-astra, gemini-3.8-flash, CohereLabs/tiny-aya-base
+spa_Latn,Spanish,CohereLabs/c4ai-command-a-03-2025, gemini-3.8-flash, CohereLabs/tiny-aya-base
+srd_Latn,Sardinian,claude-fable-5, CohereLabs/tiny-aya-base, gemini-3.8-flash
+srp_Cyrl,Serbian,claude-fable-5, CohereLabs/tiny-aya-base, mistralai/Ministral-3-8B-Instruct-2512
+ssw_Latn,Swati,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+sun_Latn,Sundanese,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+swe_Latn,Swedish,CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B, claude-fable-5
+swh_Latn,Swahili,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+szl_Latn,Silesian,claude-fable-5, CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base
+tam_Taml,Tamil,gemini-3.8-flash, gpt-6-astra, mistralai/Ministral-3-8B-Instruct-2512
+taq_Latn,Tamasheq,claude-fable-5, gemini-3.8-flash, meta-llama/Llama-2-7b-hf
+taq_Tfng,Tamasheq,gemini-3.8-flash, Qwen/Qwen3-8B, tiiuae/Falcon3-7B-Instruct
+tat_Cyrl,Tatar,gpt-6-astra, claude-fable-5, gemini-3.8-flash
+tel_Telu,Telugu,gemini-3.8-flash, gpt-6-astra, mistralai/Ministral-3-8B-Instruct-2512
+tgk_Cyrl,Tajik,gpt-6-astra, claude-fable-5, gemini-3.8-flash
+tgl_Latn,Tagalog,CohereLabs/tiny-aya-base, gpt-6-astra, meta-models/Muse-Glimmer-30B
+tha_Thai,Thai,gemini-3.8-flash, meta-models/Muse-Glimmer-30B, CohereLabs/command-a-plus-05-2026-bf16
+tir_Ethi,Tigrinya,gemini-3.8-flash, CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B
+tpi_Latn,Tok Pisin,gpt-6-astra, claude-fable-5, CohereLabs/tiny-aya-base
+tsn_Latn,Tswana,gpt-6-astra, claude-fable-5, CohereLabs/tiny-aya-base
+tso_Latn,Tsonga,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+tuk_Latn,Turkmen,gpt-6-astra, claude-fable-5, CohereLabs/tiny-aya-base
+tum_Latn,Tumbuka,gpt-6-astra, CohereLabs/tiny-aya-base, gemini-3.8-flash
+tur_Latn,Turkish,CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base, meta-models/Muse-Glimmer-30B
+twi_Latn,Twi,gpt-6-astra, gemini-3.8-flash, meta-llama/Llama-2-7b-hf
+tzm_Tfng,Central Atlas Tamazight,gemini-3.8-flash, Qwen/Qwen3-8B, tiiuae/Falcon3-7B-Instruct
+uig_Arab,Uyghur,gpt-6-astra, gemini-3.8-flash, claude-fable-5
+ukr_Cyrl,Ukrainian,claude-fable-5, CohereLabs/c4ai-command-a-03-2025, CohereLabs/tiny-aya-base
+umb_Latn,Umbundu,CohereLabs/tiny-aya-base, gpt-6-astra, claude-fable-5
+urd_Arab,Urdu,gemini-3.8-flash, gpt-6-astra, CohereLabs/tiny-aya-base
+uzn_Latn,Northern Uzbek,meta-models/Muse-Glimmer-30B, gpt-6-astra, mistralai/Ministral-3-8B-Instruct-2512
+vec_Latn,Venetian,claude-fable-5, CohereLabs/tiny-aya-base, CohereLabs/c4ai-command-a-03-2025
+vie_Latn,Vietnamese,CohereLabs/tiny-aya-base, CohereLabs/c4ai-command-a-03-2025, meta-models/Muse-Glimmer-30B
+war_Latn,Waray,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+wol_Latn,Wolof,claude-fable-5, gpt-6-astra, gemini-3.8-flash
+xho_Latn,Xhosa,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+ydd_Hebr,Eastern Yiddish,gpt-6-astra, claude-fable-5, gemini-3.8-flash
+yor_Latn,Yoruba,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
+yue_Hant,Yue Chinese,CohereLabs/c4ai-command-a-03-2025, Qwen/Qwen3.6-35B-A3B, deepseek-ai/DeepSeek-V4.1-Flash
+zho_Hans,Chinese,Qwen/Qwen3.6-35B-A3B, deepseek-ai/DeepSeek-V4.1-Flash, moonshotai/Kimi-K3
+zho_Hant,Chinese,CohereLabs/c4ai-command-a-03-2025, Qwen/Qwen3.6-35B-A3B, deepseek-ai/DeepSeek-V4.1-Flash
+zsm_Latn,Standard Malay,CohereLabs/tiny-aya-base, CohereLabs/command-a-plus-05-2026-bf16, CohereLabs/c4ai-command-a-03-2025
+zul_Latn,Zulu,CohereLabs/tiny-aya-base, gpt-6-astra, gemini-3.8-flash
